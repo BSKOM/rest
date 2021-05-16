@@ -10,6 +10,7 @@ const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 app.use(express.json());
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+// test string
 
 app.use('/', (req, res, next) => {
   if (req.originalUrl === '/') {
